@@ -50,7 +50,7 @@
     "vitest": "4.0.18"
   },
   "dependencies": {
-    "svg-sprite-loader": "6.0.11"
+    "svg-sprite-loader": "^6.0.11"
   },
   "peerDependencies": {
     "@rspack/core": "^1.7.6"
