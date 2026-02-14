@@ -1,0 +1,58 @@
+{
+  "name": "rspack-svg-sprite-loader-plugin",
+  "description": "SVG Sprite Plugin for Rspack",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "author": "peakercope <peakercope@gmail.com> (https://github.com/peakercope)",
+  "license": "MIT",
+  "homepage": "https://github.com/LuanRoger/ts-package-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LuanRoger/ts-package-template.git"
+  },
+  "keywords": [
+    "rspack",
+    "plugin",
+    "svg-sprite-loader",
+    "rspack-svg-sprite-loader-plugin"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "dev": "tsdown --watch ./src",
+    "build": "tsc && tsdown",
+    "check": "biome check",
+    "check:write": "biome check --write",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "changelog": "git-cliff --config ./scripts/git-cliff.toml --output CHANGELOG.md",
+    "publish": "np",
+    "publish:all": "npm run build && npm run publish"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.15",
+    "git-cliff": "2.12.0",
+    "np": "11.0.2",
+    "tsdown": "0.20.3",
+    "typescript": "5.9.3",
+    "vitest": "4.0.18"
+  },
+  "dependencies": {
+    "@types/node": "^25.2.3",
+    "svg-sprite-loader": "6.0.11"
+  },
+  "peerDependencies": {
+    "@rspack/core": "^1.7.6"
+  }
+}
