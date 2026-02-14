@@ -6,10 +6,10 @@
   "type": "module",
   "author": "peakercope <peakercope@gmail.com> (https://github.com/peakercope)",
   "license": "MIT",
-  "homepage": "https://github.com/LuanRoger/ts-package-template",
+  "homepage": "https://github.com/peakercope/rspack-svg-sprite-loader-plugin",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LuanRoger/ts-package-template.git"
+    "url": "https://github.com/peakercope/rspack-svg-sprite-loader-plugin.git"
   },
   "keywords": [
     "rspack",
