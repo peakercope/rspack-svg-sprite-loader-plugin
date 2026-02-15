@@ -12,6 +12,8 @@
     "url": "git+https://github.com/peakercope/rspack-svg-sprite-loader-plugin.git"
   },
   "keywords": [
+    "svg",
+    "sprite",
     "rspack",
     "plugin",
     "svg-sprite-loader",

@@ -11,7 +11,7 @@ import { SvgSpritePlugin } from "rspack-svg-sprite-loader-plugin";
 plugins: [
   new SvgSpritePlugin({
     symbolId: "icon-[name]",
-    include: [path.resolve(__dirname, "src/ui/Icon/assets")],
+    include: [path.resolve(__dirname, "src/icons")],
   }),
 ];
 ```
