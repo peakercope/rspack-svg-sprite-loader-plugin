@@ -1,7 +1,7 @@
 {
   "name": "rspack-svg-sprite-loader-plugin",
   "description": "SVG Sprite Plugin for Rspack",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "type": "module",
   "author": "peakercope <peakercope@gmail.com> (https://github.com/peakercope)",
