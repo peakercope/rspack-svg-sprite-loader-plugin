@@ -6,6 +6,7 @@ export default defineConfig({
   },
   dts: true,
   tsconfig: "tsconfig.build.json",
+  format: ['esm', 'cjs'],
   clean: true,
   copy: {
     from: 'src/loader.cjs',
