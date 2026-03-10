@@ -9,7 +9,7 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": ["src/**/*.ts"]
+    "includes": ["src/**/*.ts", "test/**/*.ts", "tsdown.config.ts"]
   },
   "formatter": {
     "enabled": true,

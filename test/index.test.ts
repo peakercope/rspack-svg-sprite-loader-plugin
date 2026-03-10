@@ -56,7 +56,10 @@ describe("SvgSpritePlugin", () => {
     plugin.apply(compiler as never);
 
     const rule = compiler.options.module.rules[0] as Record<string, unknown>;
-    const use = rule.use as Array<{ loader: string; options: Record<string, string> }>;
+    const use = rule.use as Array<{
+      loader: string;
+      options: Record<string, string>;
+    }>;
 
     expect(use).toHaveLength(1);
     expect(use[0].loader).toBe(path.resolve(__dirname, "../src", "loader.cjs"));

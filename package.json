@@ -16,7 +16,6 @@
     "sprite",
     "rspack",
     "plugin",
-    "svg-sprite-loader",
     "rspack-svg-sprite-loader-plugin"
   ],
   "files": [
@@ -48,13 +47,11 @@
     "@biomejs/biome": "2.4.6",
     "@types/node": "^25.2.3",
     "git-cliff": "2.12.0",
+    "jsdom": "^28.1.0",
     "np": "11.0.2",
     "tsdown": "0.21.0",
     "typescript": "5.9.3",
     "vitest": "4.0.18"
-  },
-  "dependencies": {
-    "svg-sprite-loader": "^6.0.11"
   },
   "peerDependencies": {
     "@rspack/core": "^1.7.6"
