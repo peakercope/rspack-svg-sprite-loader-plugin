@@ -41,6 +41,13 @@ describe("loader", () => {
     expect(result).toContain('<path d=\\"M12 2L2 22h20z\\"/>');
   });
 
+  it("should handle empty files gracefully", () => {
+    const result = runLoader("", "/project/src/icons/empty.svg");
+    expect(result).toContain('"icon-empty"');
+    expect(result).toContain('"0 0 0 0"');
+    expect(result).toContain("<symbol");
+  });
+
   it("should use custom symbolId pattern", () => {
     const result = runLoader(sampleSvg, "/project/src/icons/arrow.svg", {
       symbolId: "svg-[name]",

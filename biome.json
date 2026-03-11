@@ -9,7 +9,12 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": ["src/**/*.ts", "test/**/*.ts", "tsdown.config.ts"]
+    "includes": [
+      "src/**/*.ts",
+      "test/**/*.ts",
+      "tsdown.config.ts",
+      "vitest.config.ts"
+    ]
   },
   "formatter": {
     "enabled": true,

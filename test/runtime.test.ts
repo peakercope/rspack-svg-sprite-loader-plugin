@@ -42,4 +42,16 @@ describe("runtime", () => {
     expect(containers[0].innerHTML).toContain('id="a"');
     expect(containers[0].innerHTML).toContain('id="b"');
   });
+
+  it("should safely handle server-side (no document)", async () => {
+    // simulate environment without a DOM
+    const realDoc = global.document;
+    vi.stubGlobal("document", undefined);
+
+    const { add } = await import("../src/runtime");
+
+    expect(() => add("foo", "<symbol/>")).not.toThrow();
+
+    vi.stubGlobal("document", realDoc);
+  });
 });

@@ -1,0 +1,21 @@
+name: Test and Badge
+on: [push]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Allow the action to write to the repository (for pushing badges)
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - run: npm ci
+      - run: npx vitest run --coverage
+
+      - name: Generate Badges
+        uses: jpb06/coverage-badges-action@latest
+        with:
+          branches: main # Branch for which badges are generated

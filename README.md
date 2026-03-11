@@ -1,5 +1,7 @@
 # SVG Sprite Plugin for Rspack
 
+![Coverage total](./badges/coverage-total.svg)
+
 An Rspack plugin that transforms SVG files into a sprite sheet of `<symbol>` elements, injected into the DOM at runtime. Each SVG module exports `{ id, viewBox, url, toString() }` for use with `<svg><use href="#icon-name"/></svg>`.
 
 ## Installation
