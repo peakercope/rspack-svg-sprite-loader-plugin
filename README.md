@@ -55,9 +55,9 @@ import arrow from "./icons/arrow.svg";
 
 ### React
 
-```jsx
-import arrow from "./icons/arrow.svg";
+Create shared ui `Icon` component:
 
+```jsx
 function Icon({ svg, ...props }) {
   return (
     <svg viewBox={svg.viewBox} {...props}>
@@ -65,6 +65,19 @@ function Icon({ svg, ...props }) {
     </svg>
   );
 }
+```
 
-<Icon svg={arrow} width={24} height={24} />;
+Use it as:
+
+```jsx
+import arrow from "./icons/arrow.svg";
+
+function MyComponent() {
+  return (
+    <button type="button">
+      <Icon svg={arrow} width={24} height={24} />
+      Go to ...
+    </button>
+  );
+}
 ```
