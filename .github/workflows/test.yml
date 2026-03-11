@@ -19,3 +19,5 @@ jobs:
         uses: jpb06/coverage-badges-action@latest
         with:
           branches: main # Branch for which badges are generated
+          badges-icon: vitest
+          commit-message: "chore: updating coverage badges"
