@@ -39,7 +39,7 @@ export default function svgSpriteLoader(
   const symbolHtml = `<symbol id="${symbolId}" viewBox="${viewBox}">${innerContent}</symbol>`;
 
   const runtimePath = path
-    .resolve(__dirname, "runtime.cjs")
+    .resolve(import.meta.dirname, "runtime.cjs")
     .replace(/\\/g, "/");
 
   const output = `

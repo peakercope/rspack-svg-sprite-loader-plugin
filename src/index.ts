@@ -1,6 +1,13 @@
 import path from "node:path";
 import type { Compiler, RuleSetRule } from "@rspack/core";
 
+export interface SvgSymbol {
+  id: string;
+  viewBox: string;
+  url: string;
+  toString(): string;
+}
+
 export class SvgSpritePlugin {
   options: {
     symbolId: string;
@@ -28,7 +35,7 @@ export class SvgSpritePlugin {
       exclude,
       use: [
         {
-          loader: path.resolve(__dirname, "loader.cjs"),
+          loader: path.resolve(import.meta.dirname, "loader.cjs"),
           options: { symbolId },
         },
       ],

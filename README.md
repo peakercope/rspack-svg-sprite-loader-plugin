@@ -7,7 +7,7 @@ An Rspack plugin that transforms SVG files into a sprite sheet of `<symbol>` ele
 ## Installation
 
 ```bash
-npm install rspack-svg-sprite-loader-plugin
+npm install rspack-svg-sprite-loader-plugin -D
 ```
 
 ## Setup
@@ -36,6 +36,10 @@ export default {
 | `test`     | `RegExp`                 | `/\.svg$/`      | File matching pattern.                                          |
 | `include`  | `RuleSetRule["include"]` | `[]`            | Paths to include.                                               |
 | `exclude`  | `RuleSetRule["exclude"]` | `[]`            | Paths to exclude.                                               |
+
+## TypeScript
+
+The package exports a `SvgSymbol` type describing the shape of each SVG import. Add a module declaration to your project for whichever files the plugin handles — this avoids overriding any existing SVG typing you may already have (e.g. from SVGR or plain URL loaders).
 
 ## Usage in app
 
