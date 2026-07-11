@@ -53,7 +53,7 @@
     "np": "11.2.1",
     "tsdown": "0.22.3",
     "typescript": "6.0.3",
-    "vitest": "4.1.9"
+    "vitest": "4.1.10"
   },
   "peerDependencies": {
     "@rspack/core": "^2.0.8"
