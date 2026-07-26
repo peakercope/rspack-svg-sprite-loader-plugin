@@ -2,7 +2,6 @@
   "name": "rspack-svg-sprite-loader-plugin",
   "description": "SVG Sprite Plugin for Rspack",
   "version": "0.3.0",
-  "private": false,
   "type": "module",
   "author": "peakercope <peakercope@gmail.com> (https://github.com/peakercope)",
   "license": "MIT",
@@ -20,8 +19,7 @@
   ],
   "files": [
     "dist",
-    "README.md",
-    "CHANGELOG.md"
+    "README.md"
   ],
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
@@ -35,27 +33,28 @@
   "scripts": {
     "dev": "tsdown --watch ./src",
     "build": "tsc && tsdown",
-    "check": "biome check",
-    "check:write": "biome check --write",
     "test": "vitest run",
     "test:watch": "vitest",
-    "coverage": "vitest run --coverage",
-    "changelog": "git-cliff --config ./scripts/git-cliff.toml --output CHANGELOG.md",
-    "release": "np",
-    "release:all": "npm run build && npm run publish"
+    "typecheck": "tsc --noEmit",
+    "format": "biome check --write",
+    "lint": "biome ci",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "yarn build && changeset publish"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.0",
-    "@types/node": "^25.2.3",
-    "@vitest/coverage-v8": "^4.1.9",
-    "git-cliff": "2.12.0",
+    "@changesets/cli": "^2.31.1",
+    "@rspack/core": "^2.1.5",
+    "@types/node": "^24.13.3",
+    "@vitest/coverage-v8": "^4.1.10",
     "jsdom": "^29.1.1",
-    "np": "11.2.1",
-    "tsdown": "0.22.3",
+    "tsdown": "0.22.14",
     "typescript": "6.0.3",
-    "vitest": "4.1.9"
+    "vitest": "4.1.10"
   },
   "peerDependencies": {
-    "@rspack/core": "^2.0.8"
-  }
+    "@rspack/core": "^2.1.5"
+  },
+  "packageManager": "yarn@4.17.1"
 }
