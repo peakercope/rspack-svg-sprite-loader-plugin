@@ -2670,7 +2670,7 @@ __metadata:
     typescript: "npm:6.0.3"
     vitest: "npm:4.1.10"
   peerDependencies:
-    "@rspack/core": ^2.0.8
+    "@rspack/core": ^2.1.5
   languageName: unknown
   linkType: soft
 
